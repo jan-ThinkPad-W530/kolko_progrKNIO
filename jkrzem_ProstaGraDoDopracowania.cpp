@@ -1,7 +1,7 @@
 #include<iostream>
-#include<windows.h>
+#include<windows.h> //dla windowsa, dla linixa <unistd.h>
 #include<cstdlib>
-#include<time.h>
+#include<time.h> //lub <ctime>
 #include<string>
 #include<vector>
 
@@ -39,7 +39,7 @@ class Zgadnij{
 		srand(time(NULL));
 		
 		a = rand()%100+1;
-		//cout<<a<<endl;
+		
 		
 		while(s!=a){
 			cout<<" Wybralem liczbe. Zgadnij jaka"<<endl;
@@ -74,7 +74,7 @@ class Zut{
 			str_kostka wynik=kostka(a,b);
 			for(int i=1;i<30;i++){
 				cout<<"#";
-				Sleep(250);
+				Sleep(250); //dla linuxa sleep z ma³ej litery
 			}
 			cout<<"#"<<endl;
 	
@@ -91,13 +91,13 @@ int main(){
 	string imie,tak,odpowiedz;
 	int a; //575765
 	
-	cout<<"Witaj! Proszê podaj swoje imie :)  "<<endl;
+	cout<<"Witaj! Prosze podaj swoje imie :)  "<<endl;
 	cin>>imie;
 	cout<<"Hej "<<imie<<" :). "<<"Chcesz zagrac w gre?"<<endl;
 	cin>>odpowiedz;
 	if(odpowiedz=="tak"||odpowiedz=="Tak"){
 	
-	Sleep(3000);
+	Sleep(3000); //linux ma³a litera
 	while( true )
 	{
 	cout<<imie<<", "<<"Wybierz gre(wpisz literke): "<<endl;
@@ -112,7 +112,7 @@ int main(){
 		Zgadnij zgadnij1;
 		zgadnij1.graj();
 		
-		//switch, goto()
+		
 		
 		
 	} else if(a==2){
